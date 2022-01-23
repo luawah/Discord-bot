@@ -10,7 +10,7 @@ class Manager(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print(f"EU SOU UM TESTE. ME CHAMO {self.bot.user}")
+        print(f"Olá! Tudo bem? Sou {self.bot.user}")
 
     @commands.Cog.listener()
     async def on_message(self, message):
@@ -28,11 +28,11 @@ class Manager(commands.Cog):
     async def on_command_error(self, ctx, error):
         if isinstance(error, MissingRequiredArgument):
             await ctx.send(
-                "Favor enviar todos os Argumentos. Digite !help para ver os parâmetros de cada comando"
+                "Favor enviar todos os argumentos. Digite !help para ver os parâmetros de cada comando"
             )
         elif isinstance(error, CommandNotFound):
             await ctx.send(
-                "O comando não existe. Digite !help para ver todos os comandos"
+                "Infelizmente, este comando não existe. Digite !help para ver todos os comandos"
             )
         else:
             raise error
