@@ -12,7 +12,7 @@ class Talks(commands.Cog):
     @commands.command(name="oi", help="Envia um Oi (Não requer argumento)")
     async def send_hello(self, ctx):
 
-        response = "FAAALA BYLEARNER, BELEZA?"
+        response = "E aí? Tudo bem??"
 
         await ctx.send(response)
 
@@ -21,14 +21,14 @@ class Talks(commands.Cog):
     )
     async def secret(self, ctx):
         try:
-            await ctx.author.send("Curta o canal da ByLearn!")
-            await ctx.author.send("Lá tem vários conteúdos legais!")
+            await ctx.author.send("Grandes coisas virão...")
+            await ctx.author.send("A idade da Terra é de 4,54 milhões de anos")
             await ctx.author.send(
-                "Semana que vem tem a continuação desta série de bots para o discord"
+                "Em breve"
             )
         except discord.errors.Forbidden:
             await ctx.send(
-                "Não posso te contar o segredo, habilite receber mensagens de qualquer pessoa do servidor (Opções > Privacidade)"
+                "Não posso te contar o segredo! Por favor, habilite em (Opções > Privacidade)"
             )
 
 
